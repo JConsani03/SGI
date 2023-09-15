@@ -18,11 +18,6 @@ public class Dashboard extends javax.swing.JFrame {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
-
-    private void setFullScream(){
-        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-        gd.setFullScreenWindow(this);
-    }
     
     /**
      * This method is called from within the constructor to initialize the form.
