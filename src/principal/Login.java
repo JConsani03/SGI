@@ -5,7 +5,8 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author andre
+ * @version Alpha 0.0.1
+ * @author Andrés García
  */
 public class Login extends javax.swing.JFrame {
 
@@ -58,6 +59,7 @@ public class Login extends javax.swing.JFrame {
         boton_salir.setFont(new java.awt.Font("Segoe UI Historic", 1, 12)); // NOI18N
         boton_salir.setForeground(new java.awt.Color(255, 255, 255));
         boton_salir.setText("x");
+        boton_salir.setToolTipText("Cerrar");
         boton_salir.setBorder(null);
         boton_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         boton_salir.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +75,7 @@ public class Login extends javax.swing.JFrame {
         txt_nombre.setBackground(new java.awt.Color(16, 36, 61));
         txt_nombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txt_nombre.setForeground(new java.awt.Color(187, 187, 188));
+        txt_nombre.setToolTipText("");
         txt_nombre.setBorder(null);
         panel_login.add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 220, 30));
 
