@@ -5,7 +5,7 @@ import javax.swing.UIManager;
 
 /**
  *
- * @version Alpha 0.0.1
+ * @version Alpha 0.0.2
  * @author Andrés García
  */
 public class Login extends javax.swing.JFrame {
