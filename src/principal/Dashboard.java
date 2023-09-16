@@ -1,7 +1,5 @@
 package principal;
 
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
 import javax.swing.JFrame;
 
 /**

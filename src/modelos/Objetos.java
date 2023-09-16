@@ -7,13 +7,13 @@ package modelos;
  */
 public class Objetos {
     
-    private String id;
+    private int id;
     private String descrip;
     private int precio;
     private int unidades;
     private String fecha;
     
-    public Objetos(String id, String descrip, int precio, int unidades, String fecha){
+    public Objetos(int id, String descrip, int precio, int unidades, String fecha){
         this.id = id;
         this.descrip = descrip;
         this.precio = precio;
@@ -21,11 +21,11 @@ public class Objetos {
         this.fecha = fecha;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
