@@ -8,18 +8,14 @@ package modelos;
 public class Compra {
     private int id;
     private String fecha;
-    private String proveedor;
-    private String unidades;
     private int precioT;
-    private int precioPU;
+    private String descrip;
     
-    public Compra(int id, String fecha, String proveedor, String unidades, int precioT, int precioPU){
+    public Compra(int id, String fecha, int precioT, String descrip){
         this.id = id;
         this.fecha = fecha;
-        this.proveedor = proveedor;
-        this.unidades = unidades;
         this.precioT = precioT;
-        this.precioPU = precioPU;
+        this.descrip = descrip;
     }
 
     public int getId() {
@@ -38,22 +34,6 @@ public class Compra {
         this.fecha = fecha;
     }
 
-    public String getProveedor() {
-        return proveedor;
-    }
-
-    public void setProveedor(String proveedor) {
-        this.proveedor = proveedor;
-    }
-
-    public String getUnidades() {
-        return unidades;
-    }
-
-    public void setUnidades(String unidades) {
-        this.unidades = unidades;
-    }
-
     public int getPrecioT() {
         return precioT;
     }
@@ -62,12 +42,12 @@ public class Compra {
         this.precioT = precioT;
     }
 
-    public int getPrecioPU() {
-        return precioPU;
+    public String getDescrip() {
+        return descrip;
     }
 
-    public void setPrecioPU(int precioPU) {
-        this.precioPU = precioPU;
+    public void setDescrip(String descrip) {
+        this.descrip = descrip;
     }
     
     
