@@ -1,7 +1,8 @@
 package modelos;
 
 /**
- * 
+ * sdasdasd 
+ * asdasd
  * @version Alpha 0.0.2
  * @author Andrés García
  */
@@ -11,6 +12,13 @@ public class Compra {
     private int precioT;
     private String descrip;
     
+    /**
+     * asdasdda
+     * @param id asdasd
+     * @param fecha asdasd
+     * @param precioT asdasd
+     * @param descrip asdasd
+     */
     public Compra(int id, String fecha, int precioT, String descrip){
         this.id = id;
         this.fecha = fecha;

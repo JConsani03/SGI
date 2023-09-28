@@ -9,11 +9,11 @@ public class Reabastecer {
     private int id;
     private String fecha;
     private String proveedor;
-    private String unidades;
+    private int unidades;
     private int precioT;
     private int precioPU;
     
-    public Reabastecer(int id, String fecha, String proveedor, String unidades, int precioT, int precioPU){
+    public Reabastecer(int id, String fecha, String proveedor, int unidades, int precioT, int precioPU){
         this.id = id;
         this.fecha = fecha;
         this.proveedor = proveedor;
@@ -46,11 +46,11 @@ public class Reabastecer {
         this.proveedor = proveedor;
     }
 
-    public String getUnidades() {
+    public int getUnidades() {
         return unidades;
     }
 
-    public void setUnidades(String unidades) {
+    public void setUnidades(int unidades) {
         this.unidades = unidades;
     }
 

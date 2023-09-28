@@ -10,18 +10,39 @@ import java.sql.SQLException;
  */
 public class Conector {
     public Connection conn;
-    private final String url = "jdbc:sqlite:BaseDeDatos.db";
+    private final String url = "jdbc:sqlite:src/dataBase/BaseDeDatos.db";
     
     public void conectar(){
         try{
         conn = DriverManager.getConnection(url);
         
-        int g = conn.prepareStatement("CREATE TABLE IF NOT EXISTS Compra ("
-                + "id INTEGER PRIMARY KEY,"
+        conn.prepareStatement("CREATE TABLE IF NOT EXISTS Compra ("
+                + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + "fecha TEXT,"
                 + "precioT INTEGER, "
                 + "descrip TEXT"
                 + ");").executeUpdate();
+        conn.prepareStatement("CREATE TABLE IF NOT EXISTS Usuario ("
+                + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + "fecha TEXT,"
+                + "precioT INTEGER, "
+                + "descrip TEXT"
+                + ");").executeUpdate();
+        conn.prepareStatement("CREATE TABLE IF NOT EXISTS Reabastecer ("
+                + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + "fecha TEXT,"
+                + "proveedor TEXT, "
+                + "unidades INTEGER,"
+                + "precioT INTEGER,"
+                + "precioPU INTERGER"
+                + ");").executeUpdate();
+        conn.prepareStatement("CREATE TABLE IF NOT EXISTS producto ("
+                + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + "descrip TEXT,"
+                + "precio INTEGER,"
+                + "unidades INTEGER,"
+                + "nombre TEXT"
+                + ")").executeUpdate();
         }catch(SQLException e){
             System.out.println("ERROR JDBC: " + e);
         }
