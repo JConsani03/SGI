@@ -5,8 +5,8 @@
         <group>
             <file>file:/C:/Users/andre/Documents/NetBeansProjects/SGI/src/impl/DAO_ProductoImpl.java</file>
             <file>file:/C:/Users/andre/Documents/NetBeansProjects/SGI/src/principal/Dashboard.java</file>
-            <file>file:/C:/Users/andre/Documents/NetBeansProjects/SGI/src/interfaces/DAO_Producto.java</file>
             <file>file:/C:/Users/andre/Documents/NetBeansProjects/SGI/src/principal/Login.java</file>
+            <file>file:/C:/Users/andre/Documents/NetBeansProjects/SGI/src/impl/DAO_VentaImpl.java</file>
             <file>file:/C:/Users/andre/Documents/NetBeansProjects/SGI/src/dataBase/Conector.java</file>
         </group>
     </open-files>
