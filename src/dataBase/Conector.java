@@ -20,17 +20,12 @@ public class Conector {
         try {
             conn = DriverManager.getConnection(url);
 
+            //VENTAS
             conn.prepareStatement("CREATE TABLE IF NOT EXISTS Venta ("
                     + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + "fecha TEXT,"
                     + "precioT INTEGER, "
                     + "descrip TEXT"
-                    + ");").executeUpdate();
-            conn.prepareStatement("CREATE TABLE IF NOT EXISTS Usuario ("
-                    + "cedula TEXT PRIMARY KEY,"
-                    + "pass TEXT,"
-                    + "correo TEXT, "
-                    + "nombre TEXT"
                     + ");").executeUpdate();
             conn.prepareStatement("CREATE TABLE IF NOT EXISTS Producto ("
                     + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -45,6 +40,37 @@ public class Conector {
                     + "cantidad INTEGER, "
                     + "FOREIGN KEY(id_Venta) REFERENCES Venta(id),"
                     + "FOREIGN KEY(id_Producto) REFERENCES Producto(id)"
+                    + ");").executeUpdate();
+            //PEDIDOS
+            conn.prepareStatement("CREATE TABLE IF NOT EXISTS Pedido ("
+                    + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + "fecha TEXT,"
+                    + "precioT INTEGER, "
+                    + "descrip TEXT"
+                    + ");").executeUpdate();
+            conn.prepareStatement("CREATE TABLE IF NOT EXISTS Insumo ("
+                    + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + "precio INTEGER,"
+                    + "nombre TEXT"
+                    + ");").executeUpdate();
+            conn.prepareStatement("CREATE TABLE IF NOT EXISTS Pedido_Insumo ("
+                    + "id_Pedido INTEGER,"
+                    + "id_Insumo INTEGER,"
+                    + "cantidad INTEGER, "
+                    + "FOREIGN KEY(id_Pedido) REFERENCES Pedido(id),"
+                    + "FOREIGN KEY(id_Insumo) REFERENCES Insumo(id)"
+                    + ");").executeUpdate();
+            //ENTES
+            conn.prepareStatement("CREATE TABLE IF NOT EXISTS Usuario ("
+                    + "cedula TEXT PRIMARY KEY,"
+                    + "pass TEXT,"
+                    + "correo TEXT, "
+                    + "nombre TEXT"
+                    + ");").executeUpdate();
+            conn.prepareStatement("CREATE TABLE IF NOT EXISTS Proveedor ("
+                    + "RIF TEXT PRIMARY KEY,"
+                    + "correo TEXT, "
+                    + "nombre TEXT"
                     + ");").executeUpdate();
         } catch (SQLException e) {
             System.out.println("ERROR JDBC: " + e);

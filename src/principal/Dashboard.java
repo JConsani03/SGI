@@ -1,5 +1,6 @@
 package principal;
 
+import dataBase.Conector;
 import javax.swing.JFrame;
 
 
@@ -21,6 +22,8 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
+        Conector conn = new Conector();
+        conn.conectar();
     }
 
     /**
