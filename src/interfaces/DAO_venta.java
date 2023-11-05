@@ -11,6 +11,6 @@ import modelos.Venta;
  * @see Venta
  * @see DAO_CRUD
  */
-public interface DAO_Venta extends DAO_CRUD<Venta> {
+public interface DAO_venta extends DAO_CRUD<Venta> {
 
 }
