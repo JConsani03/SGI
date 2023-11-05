@@ -4,7 +4,7 @@ import dataBase.Conector;
 import java.sql.*;
 import java.util.ArrayList;
 import modelos.Venta;
-import interfaces.DAO_Venta;
+import interfaces.DAO_venta;
 
 /**
  * Implementación de la interfaz {@linkplain DAO_Venta}.
@@ -15,7 +15,7 @@ import interfaces.DAO_Venta;
  * @see Venta
  * @see DAO_Venta
  */
-public class DAO_VentaImpl extends Conector implements DAO_Venta {
+public class DAO_VentaImpl extends Conector implements DAO_venta {
 
     @Override
     public void insert(Venta venta) {
