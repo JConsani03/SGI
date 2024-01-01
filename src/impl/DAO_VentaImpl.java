@@ -5,13 +5,14 @@ import java.sql.*;
 import java.util.ArrayList;
 import modelos.Venta;
 import interfaces.DAO_venta;
+import java.util.function.Consumer;
 
 /**
  * Implementación de la interfaz {@linkplain DAO_Venta}.
- * 
+ *
  * @author Andrés García
  * @version Alpha 0.1.0
- * 
+ *
  * @see Venta
  * @see DAO_Venta
  */
@@ -78,7 +79,10 @@ public class DAO_VentaImpl extends Conector implements DAO_venta {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                Compras.add(new Venta(rs.getInt("id"), rs.getString("fecha"), rs.getInt("precioT"), rs.getString("descrip")));
+                Compras.add(new Venta(rs.getInt("id"),
+                        rs.getString("fecha"),
+                        rs.getInt("precioT"),
+                        rs.getString("descrip")));
             }
 
         } catch (SQLException ex) {

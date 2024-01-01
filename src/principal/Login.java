@@ -1,6 +1,7 @@
 package principal;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialDarkerContrastIJTheme;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -11,19 +12,20 @@ import java.awt.event.ActionEvent;
 /**
  * Este es la primera interfaz visualizada por el usuario.
  * <p>
- * 
- * En esta interfaz el usuario puede ingresar en el sistema 
- * al colocar su <strong>nombre de usuario</strong> y <strong>contraseña</strong> 
- * en los campos correspondientes, como también recuperar su cuenta si olvidó alguno 
- * de los datos de la misma.
- * 
+ *
+ * En esta interfaz el usuario puede ingresar en el sistema al colocar su
+ * <strong>nombre de usuario</strong> y <strong>contraseña</strong>
+ * en los campos correspondientes, como también recuperar su cuenta si olvidó
+ * alguno de los datos de la misma.
+ *
  * @author Andrés García
  * @version Alpha 0.1.0
  */
 public class Login extends JFrame {
 
     /**
-     * Constructor de la clase. Inicializa los componentes y les agrega propiedades Look and Feel.
+     * Constructor de la clase. Inicializa los componentes y les agrega
+     * propiedades Look and Feel.
      */
     public Login() {
         initComponents();
@@ -75,11 +77,11 @@ public class Login extends JFrame {
         panel_login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         boton_salir.setBackground(new java.awt.Color(186, 26, 26));
-        boton_salir.setFont(new java.awt.Font("Segoe UI Historic", 1, 12)); // NOI18N
+        boton_salir.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         boton_salir.setForeground(new java.awt.Color(255, 255, 255));
-        boton_salir.setText("x");
+        boton_salir.setText("X");
         boton_salir.setToolTipText("Cerrar");
-        boton_salir.setBorder(null);
+        boton_salir.setBorderPainted(false);
         boton_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         boton_salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,18 +95,17 @@ public class Login extends JFrame {
 
         txt_nombre.setBackground(new java.awt.Color(10, 49, 67));
         txt_nombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txt_nombre.setForeground(new java.awt.Color(187, 187, 188));
         txt_nombre.setToolTipText("");
         txt_nombre.setBorder(null);
         panel_login.add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 220, 30));
 
         label_nombre.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
-        label_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        label_nombre.setForeground(new java.awt.Color(239, 239, 239));
         label_nombre.setText("Nombre");
         panel_login.add(label_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         label_pass.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
-        label_pass.setForeground(new java.awt.Color(255, 255, 255));
+        label_pass.setForeground(new java.awt.Color(239, 239, 239));
         label_pass.setText("Contraseña");
         panel_login.add(label_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
@@ -113,18 +114,16 @@ public class Login extends JFrame {
 
         txt_pass.setBackground(new java.awt.Color(10, 49, 67));
         txt_pass.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txt_pass.setForeground(new java.awt.Color(187, 187, 188));
         txt_pass.setBorder(null);
         panel_login.add(txt_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 220, 30));
 
         label_titulo.setFont(new java.awt.Font("Segoe UI Semibold", 0, 32)); // NOI18N
-        label_titulo.setForeground(new java.awt.Color(255, 255, 255));
+        label_titulo.setForeground(new java.awt.Color(239, 239, 239));
         label_titulo.setText("Iniciar Sesión");
         panel_login.add(label_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
 
         boton_olvPass.setBackground(new java.awt.Color(10, 49, 67));
         boton_olvPass.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        boton_olvPass.setForeground(new java.awt.Color(187, 187, 188));
         boton_olvPass.setText("¿Olvidaste la contraseña?");
         boton_olvPass.setBorder(null);
         boton_olvPass.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -136,8 +135,8 @@ public class Login extends JFrame {
         panel_login.add(boton_olvPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
         boton_Ingresar.setBackground(new java.awt.Color(39, 110, 144));
-        boton_Ingresar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        boton_Ingresar.setForeground(new java.awt.Color(255, 255, 255));
+        boton_Ingresar.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
+        boton_Ingresar.setForeground(new java.awt.Color(239, 239, 239));
         boton_Ingresar.setText("Ingresar");
         boton_Ingresar.setBorderPainted(false);
         boton_Ingresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -167,11 +166,11 @@ public class Login extends JFrame {
 
     /**
      * Este evento cierra el programa.
-     * 
+     *
      * @param evt {@linkplain ActionEvent} con el evento generado.
      * @see JButton
      * @see ActionListener
-     * @see ActionEvent 
+     * @see ActionEvent
      */
     private void boton_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_salirActionPerformed
         System.out.println(evt);
@@ -179,16 +178,16 @@ public class Login extends JFrame {
     }//GEN-LAST:event_boton_salirActionPerformed
 
     /**
-     * Este evento comprueba la existencia del usuario en la
-     * base de datos. Si el usuario existe, da acceso al <strong>JFrame</strong>
+     * Este evento comprueba la existencia del usuario en la base de datos. Si
+     * el usuario existe, da acceso al <strong>JFrame</strong>
      * <strong>Dashboard</strong>.
-     * 
+     *
      * @param evt {@linkplain ActionEvent} con el evento generado.
      * @see Dashboard
      * @see JButton
      * @see JFrame
      * @see ActionListener
-     * @see ActionEvent 
+     * @see ActionEvent
      */
     private void boton_IngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_IngresarActionPerformed
         System.out.println(evt);
@@ -201,13 +200,14 @@ public class Login extends JFrame {
     }//GEN-LAST:event_boton_olvPassActionPerformed
 
     /**
-     * Este método {@link main} inicializa el Look and Feel 
-     * <strong>FlatMaterialDarkerContrast</strong>, agrega
-     * propiedades a los componentes <strong>JButton</strong>
-     * e inicia un nuevo <strong>Thread</strong> donde se establece en {@code true}
-     * la visibilidad del <strong>JFrame</strong> de la clase.
-     * 
-     * @param args {@linkplain String} con los argumentos de la línea de comando.
+     * Este método {@link main} inicializa el Look and Feel
+     * <strong>FlatMaterialDarkerContrast</strong>, agrega propiedades a los
+     * componentes <strong>JButton</strong>
+     * e inicia un nuevo <strong>Thread</strong> donde se establece en
+     * {@code true} la visibilidad del <strong>JFrame</strong> de la clase.
+     *
+     * @param args {@linkplain String} con los argumentos de la línea de
+     * comando.
      * @see JButton
      * @see Thread
      * @see EventQueue
@@ -217,7 +217,9 @@ public class Login extends JFrame {
 
         FlatMaterialDarkerContrastIJTheme.setup();
         UIManager.put("Button.arc", 25);
-        
+        //UIManager.put("TableHeader.background", new Color(206, 207, 201));
+        UIManager.put("TableHeader.foreground", new Color(239,239,239));
+
         java.awt.EventQueue.invokeLater(() -> {
             new Login().setVisible(true);
         });

@@ -2,6 +2,9 @@ package principal;
 
 import dataBase.Conector;
 import javax.swing.JFrame;
+import vistas.Historial;
+import vistas.Pedir;
+import vistas.Vender;
 
 
 /**
@@ -24,6 +27,7 @@ public class Dashboard extends javax.swing.JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         Conector conn = new Conector();
         conn.conectar();
+        conn.desconectar();
     }
 
     /**
@@ -37,64 +41,113 @@ public class Dashboard extends javax.swing.JFrame {
 
         panel_fondo = new javax.swing.JPanel();
         panel_menu = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        boton_vender = new javax.swing.JButton();
+        boton_pedir = new javax.swing.JButton();
+        boton_producto = new javax.swing.JButton();
+        boton_insumos = new javax.swing.JButton();
+        boton_proveedores = new javax.swing.JButton();
+        boton_usuarios = new javax.swing.JButton();
         panel_banner = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        panelTableado_principal = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1020, 600));
+        setMinimumSize(new java.awt.Dimension(1020, 700));
 
         panel_fondo.setBackground(new java.awt.Color(206, 207, 201));
 
         panel_menu.setBackground(new java.awt.Color(10, 49, 67));
 
-        jButton1.setText("VENDER");
-        jButton1.setBorderPainted(false);
+        boton_vender.setBackground(new java.awt.Color(39, 110, 144));
+        boton_vender.setFont(new java.awt.Font("Segoe UI Black", 0, 16)); // NOI18N
+        boton_vender.setForeground(new java.awt.Color(239, 239, 239));
+        boton_vender.setText("VENDER");
+        boton_vender.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        boton_vender.setBorderPainted(false);
+        boton_vender.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boton_vender.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        boton_vender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_venderActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("PEDIR");
+        boton_pedir.setBackground(new java.awt.Color(39, 110, 144));
+        boton_pedir.setFont(new java.awt.Font("Segoe UI Black", 0, 16)); // NOI18N
+        boton_pedir.setForeground(new java.awt.Color(239, 239, 239));
+        boton_pedir.setText("PEDIR");
+        boton_pedir.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        boton_pedir.setBorderPainted(false);
+        boton_pedir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boton_pedir.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        boton_pedir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_pedirActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("PRODUCTOS");
+        boton_producto.setBackground(new java.awt.Color(39, 110, 144));
+        boton_producto.setFont(new java.awt.Font("Segoe UI Black", 0, 16)); // NOI18N
+        boton_producto.setForeground(new java.awt.Color(239, 239, 239));
+        boton_producto.setText("PRODUCTOS");
+        boton_producto.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        boton_producto.setBorderPainted(false);
+        boton_producto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boton_producto.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
-        jButton4.setText("INSUMOS");
+        boton_insumos.setBackground(new java.awt.Color(39, 110, 144));
+        boton_insumos.setFont(new java.awt.Font("Segoe UI Black", 0, 16)); // NOI18N
+        boton_insumos.setForeground(new java.awt.Color(239, 239, 239));
+        boton_insumos.setText("INSUMOS");
+        boton_insumos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        boton_insumos.setBorderPainted(false);
+        boton_insumos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boton_insumos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
-        jButton5.setText("PROVEEDORES");
+        boton_proveedores.setBackground(new java.awt.Color(39, 110, 144));
+        boton_proveedores.setFont(new java.awt.Font("Segoe UI Black", 0, 16)); // NOI18N
+        boton_proveedores.setForeground(new java.awt.Color(239, 239, 239));
+        boton_proveedores.setText("PROVEEDORES");
+        boton_proveedores.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        boton_proveedores.setBorderPainted(false);
+        boton_proveedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boton_proveedores.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
-        jButton6.setText("USUARIOS");
+        boton_usuarios.setBackground(new java.awt.Color(39, 110, 144));
+        boton_usuarios.setFont(new java.awt.Font("Segoe UI Black", 0, 16)); // NOI18N
+        boton_usuarios.setForeground(new java.awt.Color(239, 239, 239));
+        boton_usuarios.setText("USUARIOS");
+        boton_usuarios.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        boton_usuarios.setBorderPainted(false);
+        boton_usuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boton_usuarios.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout panel_menuLayout = new javax.swing.GroupLayout(panel_menu);
         panel_menu.setLayout(panel_menuLayout);
         panel_menuLayout.setHorizontalGroup(
             panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(boton_vender, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(boton_pedir, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(boton_producto, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(boton_insumos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(boton_proveedores, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(boton_usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         panel_menuLayout.setVerticalGroup(
             panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_menuLayout.createSequentialGroup()
-                .addGap(167, 167, 167)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(150, 150, 150)
+                .addComponent(boton_vender, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(boton_pedir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(boton_producto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(boton_insumos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(boton_proveedores, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(boton_usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(270, Short.MAX_VALUE))
         );
 
         panel_banner.setBackground(new java.awt.Color(39, 110, 144));
@@ -103,41 +156,16 @@ public class Dashboard extends javax.swing.JFrame {
         panel_banner.setLayout(panel_bannerLayout);
         panel_bannerLayout.setHorizontalGroup(
             panel_bannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 1100, Short.MAX_VALUE)
         );
         panel_bannerLayout.setVerticalGroup(
             panel_bannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 150, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.setBackground(new java.awt.Color(102, 102, 102));
-        jTabbedPane1.setForeground(new java.awt.Color(0, 0, 0));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 808, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 407, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("tab1", jPanel1);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 808, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 407, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("tab2", jPanel2);
+        panelTableado_principal.setBackground(new java.awt.Color(39, 110, 144));
+        panelTableado_principal.setForeground(new java.awt.Color(239, 239, 239));
+        panelTableado_principal.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout panel_fondoLayout = new javax.swing.GroupLayout(panel_fondo);
         panel_fondo.setLayout(panel_fondoLayout);
@@ -149,7 +177,7 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(panel_banner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panel_fondoLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jTabbedPane1)
+                        .addComponent(panelTableado_principal)
                         .addContainerGap())))
         );
         panel_fondoLayout.setVerticalGroup(
@@ -158,7 +186,7 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(panel_fondoLayout.createSequentialGroup()
                 .addComponent(panel_banner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1)
+                .addComponent(panelTableado_principal)
                 .addContainerGap())
         );
 
@@ -174,8 +202,17 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void boton_venderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_venderActionPerformed
+        System.out.println(evt);
+        Utilidades.setVista("Vender", "Historial", new Vender(), new Historial(), panelTableado_principal);
+    }//GEN-LAST:event_boton_venderActionPerformed
+
+    private void boton_pedirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_pedirActionPerformed
+        System.out.println(evt);
+        Utilidades.setVista("Pedir", "Historial", new Pedir(), new Historial(), panelTableado_principal);
+    }//GEN-LAST:event_boton_pedirActionPerformed
 
     /**
      * Este método {@linkplain main} inicia un nuevo <strong>Thread</strong> 
@@ -188,22 +225,19 @@ public class Dashboard extends javax.swing.JFrame {
      * @see EventQueue
      */
     public static void main(String args[]) {
-
         java.awt.EventQueue.invokeLater(() -> {
             new Dashboard().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JButton boton_insumos;
+    private javax.swing.JButton boton_pedir;
+    private javax.swing.JButton boton_producto;
+    private javax.swing.JButton boton_proveedores;
+    private javax.swing.JButton boton_usuarios;
+    private javax.swing.JButton boton_vender;
+    private javax.swing.JTabbedPane panelTableado_principal;
     private javax.swing.JPanel panel_banner;
     private javax.swing.JPanel panel_fondo;
     private javax.swing.JPanel panel_menu;

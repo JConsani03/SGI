@@ -38,8 +38,8 @@ public class Conector {
                     + "id_Venta INTEGER,"
                     + "id_Producto INTEGER,"
                     + "cantidad INTEGER, "
-                    + "FOREIGN KEY(id_Venta) REFERENCES Venta(id),"
-                    + "FOREIGN KEY(id_Producto) REFERENCES Producto(id)"
+                    + "FOREIGN KEY(id_Venta) REFERENCES Venta(id) ON DELETE CASCADE,"
+                    + "FOREIGN KEY(id_Producto) REFERENCES Producto(id) ON DELETE CASCADE"
                     + ");").executeUpdate();
             //PEDIDOS
             conn.prepareStatement("CREATE TABLE IF NOT EXISTS Pedido ("
@@ -57,8 +57,8 @@ public class Conector {
                     + "id_Pedido INTEGER,"
                     + "id_Insumo INTEGER,"
                     + "cantidad INTEGER, "
-                    + "FOREIGN KEY(id_Pedido) REFERENCES Pedido(id),"
-                    + "FOREIGN KEY(id_Insumo) REFERENCES Insumo(id)"
+                    + "FOREIGN KEY(id_Pedido) REFERENCES Pedido(id) ON DELETE CASCADE,"
+                    + "FOREIGN KEY(id_Insumo) REFERENCES Insumo(id) ON DELETE CASCADE"
                     + ");").executeUpdate();
             //ENTES
             conn.prepareStatement("CREATE TABLE IF NOT EXISTS Usuario ("
