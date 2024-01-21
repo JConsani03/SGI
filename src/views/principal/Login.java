@@ -1,4 +1,4 @@
-package principal;
+package views.principal;
 
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialDarkerContrastIJTheme;
 import java.awt.Color;

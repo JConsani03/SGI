@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package vistas;
+package views;
 
 /**
  *
  * @author andre
  */
-public class Usuarios extends javax.swing.JPanel {
+public class Proveedores extends javax.swing.JPanel {
 
     /**
-     * Creates new form Usuarios
+     * Creates new form Proveedores
      */
-    public Usuarios() {
+    public Proveedores() {
         initComponents();
     }
 

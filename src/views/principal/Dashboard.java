@@ -1,10 +1,10 @@
-package principal;
+package views.principal;
 
-import dataBase.Conector;
+import controller.dataBase.Conector;
 import javax.swing.JFrame;
-import vistas.Historial;
-import vistas.Pedir;
-import vistas.Vender;
+import views.Historial;
+import views.Pedir;
+import views.Vender;
 
 
 /**

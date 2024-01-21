@@ -1,6 +1,6 @@
-package interfaces;
+package controller.dao;
 
-import modelos.Producto;
+import models.Producto;
 
 /**
  * Interfaz para el modelo <strong>Producto</strong>. Actúa como clase hija para

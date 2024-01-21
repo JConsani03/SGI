@@ -1,4 +1,4 @@
-package principal;
+package views.principal;
 
 import java.time.LocalDate;
 import javax.swing.JPanel;

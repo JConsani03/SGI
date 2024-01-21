@@ -1,4 +1,4 @@
-package modelos;
+package models;
 
 /**
  * Modelo para la tabla <strong>Usuario</strong>. Contiene todos los atributos

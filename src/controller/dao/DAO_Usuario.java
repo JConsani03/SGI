@@ -1,6 +1,6 @@
-package interfaces;
+package controller.dao;
 
-import modelos.Usuario;
+import models.Usuario;
 
 /**
  * Interfaz para el modelo <strong>Usuario</strong>. Actúa como clase hija para

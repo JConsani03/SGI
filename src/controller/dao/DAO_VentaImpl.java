@@ -1,10 +1,10 @@
-package impl;
+package controller.dao;
 
-import dataBase.Conector;
+import controller.dataBase.Conector;
 import java.sql.*;
 import java.util.ArrayList;
-import modelos.Venta;
-import interfaces.DAO_venta;
+import models.Venta;
+import controller.dao.DAO_venta;
 import java.util.function.Consumer;
 
 /**

@@ -1,6 +1,6 @@
-package interfaces;
+package controller.dao;
 
-import modelos.Venta;
+import models.Venta;
 
 /**
  * Interfaz para el modelo <strong>Venta</strong>. Actúa como clase hija para

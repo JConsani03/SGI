@@ -1,13 +1,13 @@
-package impl;
+package controller.dao;
 
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
-import dataBase.Conector;
-import interfaces.DAO_Producto;
+import controller.dataBase.Conector;
+import controller.dao.DAO_Producto;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import modelos.Producto;
+import models.Producto;
 
 /**
  * Implementación de la interfaz {@linkplain DAO_Producto}.
