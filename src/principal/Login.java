@@ -127,6 +127,7 @@ public class Login extends JFrame {
         boton_olvPass.setText("¿Olvidaste la contraseña?");
         boton_olvPass.setBorder(null);
         boton_olvPass.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boton_olvPass.setFocusable(false);
         boton_olvPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton_olvPassActionPerformed(evt);
